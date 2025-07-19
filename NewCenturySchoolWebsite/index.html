@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Accueil – Enfant du Monde</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 🔶 Header -->
+  <header>
+    <img src="images/logo.jpg" alt="Logo Enfant du Monde" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="mission.html">Mission</a></li>
+        <li><a href="activites.html">Activités</a></li>
+        <li><a href="horaire.html">Horaire</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🔶 Hero Section -->
+  <section class="hero">
+    <h1>🌈 Bienvenue à Enfant du Monde</h1>
+    <p>Un lieu d'apprentissage chaleureux, multiculturel et bienveillant pour tous les enfants.</p>
+    <a href="mission.html" class="btn">Découvrir notre mission</a>
+  </section>
+
+  <!-- 🔶 Camp d'été Section -->
+  <section class="camp-preview">
+    <h2>🏕️ Programmes 2024–2025</h2>
+    <p>Un été pour apprendre, jouer et s'épanouir dans un environnement chaleureux !</p>
+
+    <!-- Buttons to reveal content -->
+    <div style="text-align: center;">
+      <button onclick="toggleImage('verdun')" class="btn">📄 Programme Verdun</button>
+      <button onclick="toggleImage('ids')" class="btn">📄 Programme Île-des-Sœurs</button>
+      <button onclick="openForm()" class="btn">📝 Je m'inscris</button>
+    </div>
+
+    <!-- Hidden Images -->
+    <div id="verdun" style="display:none; margin-top: 20px;">
+      <img src="https://la-galaxie-sierra.com/camp-ete-2025-verdun.JPEG" alt="Camp Verdun 2025" class="photo">
+    </div>
+
+    <div id="ids" style="display:none; margin-top: 20px;">
+      <img src="https://la-galaxie-sierra.com/camp-ete-2025-ids.JPEG" alt="Camp IDS 2025" class="photo">
+    </div>
+  </section>
+
+  <!-- 🔶 Footer -->
+  <footer>
+    <p>&copy; 2025 Enfant du Monde – Ensemble pour l’avenir</p>
+  </footer>
+
+  <!-- 🔶 JavaScript -->
+  <script>
+    function toggleImage(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === 'none') ? 'block' : 'none';
+    }
+
+    function openForm() {
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSeCDNKhJY1GaauXUWSaS0rG-pPMbxNJZr8Qxlbcr4LbW5HBCA/viewform", "_blank");
+    }
+  </script>
+
+</body>
+</html>
