@@ -1,0 +1,260 @@
+/* 全局样式 */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fff8f0;
+  color: #444;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 页眉导航 */
+header {
+  background-image: url('../images/logo.jpg'); /* 背景图可替换 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 0;
+}
+
+header * {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  display: none; /* 如果只使用背景图，可隐藏 logo 图片元素 */
+}
+
+/* 导航菜单 */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #fff;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffdbb0;
+  border-bottom: 2px solid #ffdbb0;
+}
+
+/* 欢迎区 Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/banner.jpg') center/cover no-repeat;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #f4a261;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* 页脚 */
+footer {
+  background-color: #ffe4d1;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+/* 主体内容区域 */
+.mission, .horaire, .activites, .contact, .gallery, .camp-preview {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* 使命和时间安排区块 */
+.mission-banner, .horaire-banner {
+  text-align: center;
+  background-color: #fcefe1;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.mission-content ul,
+.horaire-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.mission-content li,
+.horaire-content li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 10px;
+}
+
+.mission-content li::before,
+.horaire-content li::before {
+  content: "🌱";
+  position: absolute;
+  left: 0;
+}
+
+/* 活动板块样式 */
+.activite-block {
+  background-color: #fcefe1;
+  margin: 20px 0;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.activite-block h2 {
+  color: #0099cc;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.activite-block p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* 图集展示 */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.photo-grid img,
+.photo {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* 联系区和嵌入表单 */
+.contact-info p,
+.recrutement p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.formulaire-contact iframe,
+.camp-preview iframe {
+  border: none;
+  margin-top: 20px;
+}
+
+.recrutement h2 {
+  margin-top: 40px;
+  color: #d0663b;
+}
+
+/* 响应式优化建议 */
+@media screen and (max-width: 600px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 1.8em;
+  }
+
+  .btn {
+    font-size: 0.9em;
+  }
+}
+
+.contact-banner {
+  text-align: center;
+  background-color: #fcefe1;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+}
+
+.contact-banner h1 {
+  font-size: 2.2em;
+  color: #d0663b;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  color: #0099cc;
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: #f4a261;
+  font-weight: bold;
+}
+
+.map-btn {
+  display: inline-block;
+  background-color: #2a9d8f;      /* 深色背景 */
+  color: #fff;                    /* 白色文字清晰可见 */
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  margin-top: 10px;
+}
+.map-btn:hover {
+  background-color: #21867a;
+}
