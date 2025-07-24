@@ -91,7 +91,9 @@ nav a.active {
   color: white;
   font-weight: bold;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 20px;  
+  font-size: 18px; /* 为所有按钮统一设置字体大小，18px 可根据需要调整 */
+
 }
 
 /* 页脚 */
