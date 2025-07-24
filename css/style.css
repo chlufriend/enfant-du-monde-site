@@ -261,3 +261,21 @@ footer {
   background-color: #21867a;
 }
 
+/* 活泼的“Déjà 19 ans !”标签样式 */
+.anniversaire {
+  display: inline-block;
+  background-color: #ffe066;
+  color: #d35400;
+  font-weight: bold;
+  padding: 4px 10px;
+  margin-left: 12px;
+  border-radius: 12px;
+  font-size: 16px;
+  animation: bounce 1s infinite alternate;
+}
+
+/* 轻微跳动动画 */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-8px);}
+}
