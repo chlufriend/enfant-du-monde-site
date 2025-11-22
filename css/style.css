@@ -279,3 +279,21 @@ footer {
   0%   { transform: translateY(0); }
   100% { transform: translateY(-8px);}
 }
+
+
+.mission-content p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+.mission-objectifs ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  line-height: 1.6;
+}
+
+.mission-objectifs h2,
+.mission-content h2 {
+  margin-top: 2em;
+  color: #444;
+}
