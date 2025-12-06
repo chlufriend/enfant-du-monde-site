@@ -105,6 +105,30 @@
       height: 200px;
       border-radius: 8px;
     }
+
+    /* Camps Gallery */
+    .camps-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px 20px;
+    }
+
+    .camp-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      max-width: 350px;
+      text-align: center;
+    }
+
+    .camp-photo {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body>
@@ -158,12 +182,6 @@
         <button onclick="openForm()" class="btn">📝 Je m'inscris</button>
         <button onclick="openPDF()" class="btn">📑 Consignes d’inscription</button>
       </div>
-      <div id="verdun" style="display:none;">
-        <img src="images/202508_camp_Verdun.jpg" alt="Camp Verdun" class="photo">
-      </div>
-      <div id="ids" style="display:none;">
-        <img src="images/202508_camp_IDS.jpg" alt="Camp IDS" class="photo">
-      </div>
     </section>
 
     <!-- ♟️ Club d'Échecs -->
@@ -176,15 +194,27 @@
       </div>
     </section>
 
-    <!-- 🎬 Vidéos juste en dessous des trois blocs -->
-    <div class="video-row">
-      <iframe src="https://www.youtube.com/embed/q3rx6KElXGw" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/jBGUIKZOAjY" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/NWM6mklCWU4" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/ndYf0GX4_IM" allowfullscreen></iframe>
-    </div>
-
   </main>
+
+  <!-- 🖼️ Camps Gallery -->
+  <div class="camps-gallery">
+    <div class="camp-card">
+      <img src="images/202508_camp_Verdun.jpg" alt="Camp Verdun" class="camp-photo">
+      <h3>Camp Verdun 2026</h3>
+    </div>
+    <div class="camp-card">
+      <img src="images/202508_camp_IDS.jpg" alt="Camp Île-des-Sœurs" class="camp-photo">
+      <h3>Camp Île-des-Sœurs 2026</h3>
+    </div>
+  </div>
+
+  <!-- 🎬 Vidéos -->
+  <div class="video-row">
+    <iframe src="https://www.youtube.com/embed/q3rx6KElXGw" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/jBGUIKZOAjY" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/NWM6mklCWU4" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/ndYf0GX4_IM" allowfullscreen></iframe>
+  </div>
 
   <!-- 🔶 Footer -->
   <footer>
@@ -202,13 +232,7 @@
       window.open("https://docs.google.com/forms/d/1tJuVyz9GF1A6EaxkJO6QGBWwtH8RaPQZLYRqp4PRxEU/viewform?edit_requested=true", "_blank");
     }
 
-    function openPDF() {
-      window.open("https://drive.google.com/file/d/1GOv_6QMIuHzgNeLSqo3qn7rW-BggJ2pd/view", "_blank");
-    }
-  </script>
-
-</body>
-</html>
+    function openPDF()
 
 
 
