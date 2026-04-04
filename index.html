@@ -75,10 +75,19 @@
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
+      font-size: 14px;
     }
 
     .btn:hover {
       background-color: #2980b9;
+    }
+
+    .btn-secondary {
+      background-color: #27ae60;
+    }
+
+    .btn-secondary:hover {
+      background-color: #229954;
     }
 
     .btn-group {
@@ -129,6 +138,23 @@
       border-radius: 8px;
       margin-bottom: 10px;
     }
+
+    /* Health Record Banner */
+    .health-banner {
+      background: #e74c3c;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      margin: 20px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .health-banner a {
+      color: white;
+      text-decoration: underline;
+      margin-left: 10px;
+    }
   </style>
 </head>
 <body>
@@ -151,48 +177,67 @@
   <!-- 🔶 Hero -->
   <section class="hero">
     <h1>🌈 Bienvenue à Enfant du Monde</h1>
-    <p>Un espace éducatif multiculturel et bienveillant pour les enfants de Verdun et de l’Île-des-Sœurs.</p>
+    <p>Un espace éducatif multiculturel et bienveillant pour les enfants de Verdun et de l'Île-des-Sœurs.</p>
     <a href="mission.html" class="btn">Découvrir notre mission</a>
   </section>
 
-  <!-- 🔶 Main Sections -->
+  <!-- 🏥 Health Record Banner -->
+  <div class="health-banner">
+    📋 Dossier Médical / Health Record
+    <a href="https://docs.google.com/forms/d/YOUR_HEALTH_FORM_ID/viewform" target="_blank">Soumettre →</a>
+  </div>
+
+  <!-- 🔶 Main 4 Blocks -->
   <main class="main-sections">
 
-    <!-- 📚 Programme Parascolaire -->
+    <!-- ☀️ Camp d'été -->
     <section class="bloc">
-      <h2>📚 Programme Parascolaire</h2>
-      <p>Des cours après l'école et le samedi : chinois, français, anglais, mathématiques, arts, danse, calligraphie, jeu de go, etc.</p>
+      <h2>☀️ Camp d'été 2026</h2>
+      <p>Un été rempli d'aventures, d'apprentissage et de plaisir dans un environnement chaleureux et multiculturel!</p>
       <div class="btn-group">
-        <a href="activites.html" class="btn">Voir les activités</a>
-        <a href="images/202508_camp_Verdun.jpg" class="btn" target="_blank">📄 Programme 2026 Verdun</a>
-        <a href="images/202508_camp_IDS.jpg" class="btn" target="_blank">📄 Programme 2026 Île-des-Sœurs</a>
+        <a href="images/camp_ete_verdun.jpg" class="btn" target="_blank">📄 Programme Verdun</a>
+        <a href="images/camp_ete_ids.jpg" class="btn" target="_blank">📄 Programme Île-des-Sœurs</a>
+        <button onclick="openSummerForm()" class="btn btn-secondary">📝 Je m'inscris</button>
+        <a href="https://docs.google.com/document/d/1bN7KuelLDV33_qI5GNHxk0dhuYbG1G29/edit" class="btn">📋 Règlement</a>
+        <a href="https://docs.google.com/document/d/1Y5o5V8yksqfKva1qDAojCXVkTXf3XFik/edit?tab=t.0" class="btn">🕐 Horaires des Activités</a>
+        <button onclick="openSummerPDF()" class="btn">📑 Consignes</button>
       </div>
     </section>
 
-    <!-- 🏕️ Camps d'hiver 2026 -->
+    <!-- ❄️ Camp de relâche -->
     <section class="bloc">
-      <h2>
-        🏕️ Camp semaine relache 2026
-        <span class="anniversaire">🎉 Déjà 21 ans !</span>
-      </h2>
-      <p>Un hiver pour apprendre, jouer et s’épanouir dans un environnement chaleureux !</p>
+      <h2>❄️ Camp de relâche 2026</h2>
+      <p>Un hiver pour apprendre, jouer et s'épanouir dans un environnement chaleureux!</p>
       <div class="btn-group">
         <a href="images/2026.01 Verdun.jpg" class="btn" target="_blank">📄 Programme Verdun</a>
         <a href="images/202601 IDS.jpg" class="btn" target="_blank">📄 Programme Île-des-Sœurs</a>
-        <button onclick="openForm()" class="btn">📝 Je m'inscris</button>
-        <button onclick="openPDF()" class="btn">📑 Consignes d’inscription</button>
+        <button onclick="openBreakForm()" class="btn btn-secondary">📝 Je m'inscris</button>
+        <button onclick="openBreakPDF()" class="btn">📑 Consignes d'inscription</button>
         <a href="https://drive.google.com/file/d/1bk-Pkv2ajSqUDGEkmk8ZkvBkvnusmKBl/view?usp=sharing" 
-       class="btn" target="_blank">🗓️ Horaire des Activités</a>
+           class="btn" target="_blank">🗓️ Horaire des Activités</a>
       </div>
     </section>
 
     <!-- ♟️ Club d'Échecs -->
     <section class="bloc">
-      <h2>♟️ Club d'Échecs</h2>
-      <p>Ateliers, tournois et développement stratégique pour les jeunes passionnés d’échecs à Verdun.</p>
+      <h2>♟️ Club d'Échecs Verdun</h2>
+      <p>Ateliers, tournois et développement stratégique pour les jeunes passionnés d'échecs à Verdun.</p>
       <div class="btn-group">
-        <a href="images/2026ChessQualification.jpg" class="btn" target="_blank">🎯 Qualification au TOURNOI D'ÉCHECS</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvvVoSC4oMVWZSiFmahZ0geoGM02V4JOQFmjGFesxPeed_3A/viewform" class="btn" target="_blank">📝 Je m'inscris</a>
+        <a href="images/2026ChessQualification.jpg" class="btn" target="_blank">🎯 Qualification au TOURNOI</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvvVoSC4oMVWZSiFmahZ0geoGM02V4JOQFmjGFesxPeed_3A/viewform" 
+           class="btn btn-secondary" target="_blank">📝 Je m'inscris</a>
+      </div>
+    </section>
+
+    <!-- 📚 Programme Parascolaire -->
+    <section class="bloc">
+      <h2>📚 Programme Parascolaire</h2>
+      <p>Cours après l'école et le samedi: chinois, français, anglais, mathématiques, arts, danse, calligraphie, jeu de go, etc.</p>
+      <div class="btn-group">
+        <a href="images/202508_camp_Verdun.jpg" class="btn" target="_blank">📄 Programme 2026 Verdun</a>
+        <a href="images/202508_camp_IDS.jpg" class="btn" target="_blank">📄 Programme 2026 Île-des-Sœurs</a>
+        <button onclick="openAfterSchoolForm()" class="btn btn-secondary">📝 Je m'inscris</button>
+        <a href="activites.html" class="btn">👀 Voir les activités</a>
       </div>
     </section>
 
@@ -201,12 +246,16 @@
   <!-- 🖼️ Camps Gallery -->
   <div class="camps-gallery">
     <div class="camp-card">
-      <img src="images/202508_camp_Verdun.jpg" alt="Camp Verdun" class="camp-photo">
-      <h3>Camp Verdun 2026</h3>
+      <img src="images/camp_ete_verdun.jpg" alt="Camp Été Verdun" class="camp-photo">
+      <h3>Camp d'été Verdun 2026</h3>
     </div>
     <div class="camp-card">
-      <img src="images/202508_camp_IDS.jpg" alt="Camp Île-des-Sœurs" class="camp-photo">
-      <h3>Camp Île-des-Sœurs 2026</h3>
+      <img src="images/camp_ete_ids.jpg" alt="Camp Été Île-des-Sœurs" class="camp-photo">
+      <h3>Camp d'été Île-des-Sœurs 2026</h3>
+    </div>
+    <div class="camp-card">
+      <img src="images/camp_relache.jpg" alt="Camp de Relâche" class="camp-photo">
+      <h3>Camp de relâche 2026</h3>
     </div>
   </div>
 
@@ -220,7 +269,7 @@
 
   <!-- 🔶 Footer -->
   <footer>
-    <p>&copy; 2025 Enfant du Monde – Ensemble pour l’avenir</p>
+    <p>&copy; 2025 Enfant du Monde – Ensemble pour l'avenir</p>
   </footer>
 
   <!-- 🔶 JavaScript -->
@@ -230,16 +279,30 @@
       el.style.display = (el.style.display === 'none') ? 'block' : 'none';
     }
 
-    function openForm() {
+    // Summer Camp Registration
+    function openSummerForm() {
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSeMJ9Lt-E8mENz_ckdR9QnP7HlGyVMqm5TQ6LtfO6r3RSE4eQ/viewform", "_blank");
+    }
+
+    function openSummerPDF() {
+      window.open("https://docs.google.com/document/d/1bN7KuelLDV33_qI5GNHxk0dhuYbG1G29/edit?rtpof=true&tab=t.0", "_blank");
+    }
+
+    // Break Camp Registration
+    function openBreakForm() {
       window.open("https://docs.google.com/forms/d/1tJuVyz9GF1A6EaxkJO6QGBWwtH8RaPQZLYRqp4PRxEU/viewform?edit_requested=true", "_blank");
     }
 
-    function openPDF()  {
-       window.open("https://drive.google.com/file/d/1GOv_6QMIuHzgNeLSqo3qn7rW-BggJ2pd/view?usp=sharing", "_blank");
+    function openBreakPDF() {
+      window.open("https://drive.google.com/file/d/1GOv_6QMIuHzgNeLSqo3qn7rW-BggJ2pd/view?usp=sharing", "_blank");
+    }
+
+    // After-School Program Registration
+    function openAfterSchoolForm() {
+      window.open("https://docs.google.com/forms/d/YOUR_AFTER_SCHOOL_FORM_ID/viewform?edit_requested=true", "_blank");
     }
   </script>
 
-
-
-
+</body>
+</html>
 
